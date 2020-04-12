@@ -4,16 +4,15 @@ import VideoPlayer from '../components/VideoPlayer.js';
 
 //TODO: define a VideoPlayerContainer component which will hook up your action
 //dispatchers with your VideoPlayer component props.
-let mapDispatchToProp = (state) => ({
+let mapStateToProps = (state) => ({
   video: state.currentVideo
 });
 
-let mapDispatchToProp = (dispatch) => ({})
+let mapDispatchToProps = (dispatch) => ({ });
 
-
-var VideoPlayerContainer = connect(
+let VideoPlayerContainer = connect(
   mapStateToProps,
-  mapDispatchToProp
+  mapDispatchToProps
 )(VideoPlayer);
 
 export default VideoPlayerContainer;

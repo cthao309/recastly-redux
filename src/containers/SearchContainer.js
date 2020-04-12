@@ -10,6 +10,13 @@ import handleSearchChange from '../actions/search.js';
 
 let mapStateToProps = (state) => ({ });
 
+let mapDispatchToProps = (dispatch) => ({
+  handleSearchInputChange: (q) => {
+    dispatch(handleSearchChange(q));
+  }
+});
+
 var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
 
 export default SearchContainer;
+
